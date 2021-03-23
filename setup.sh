@@ -252,7 +252,13 @@ install_dstil_overcommit () {
 
     verbose "Installed overcommit hooks."
 }
-
+#
+# install gem bundler
+#
+install_gem()
+{
+  sudo install gem bundler
+}
 #
 # Install LaTeX.
 #
@@ -284,6 +290,7 @@ fi
 
 install_native_tools
 install_rbenv
+install gem
 install_postgres
 install_dstil_overcommit
 install_dfire_dependencies
