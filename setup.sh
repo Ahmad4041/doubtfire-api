@@ -258,6 +258,7 @@ install_dstil_overcommit () {
 install_gem()
 {
   sudo install gem bundler
+  verbose "Installed Gem Bundler"
 }
 #
 # Install LaTeX.
