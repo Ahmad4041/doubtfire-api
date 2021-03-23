@@ -32,8 +32,11 @@ jobs:
 #         ruby-version: ${{ matrix.ruby-version }}
 #         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Set up Enviroment
-      shell: chmod +x ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
-      run: sh ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
+      run: | 
+            sh chmod +x ./setup.sh
+            sh ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
 
     - name: Run Project
       run: bundle exec rails s
+# shell: chmod +x ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
+#       run: sh ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
