@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        ruby-version: ['2.3']
+        ruby-version: ['2.3.1']
 
     steps:
     - uses: actions/checkout@v2
@@ -31,8 +31,6 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Checking Ruby Versions
-      run: sh ruby -v
 
 
     - name: Set up Enviroment
