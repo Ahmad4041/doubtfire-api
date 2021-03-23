@@ -290,7 +290,7 @@ fi
 
 install_native_tools
 install_rbenv
-install gem
+install_gem
 install_postgres
 install_dstil_overcommit
 install_dfire_dependencies
