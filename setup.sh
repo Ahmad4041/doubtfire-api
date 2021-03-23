@@ -226,7 +226,7 @@ install_dfire_dependencies () {
     msg "Installing Doubtfire dependencies..."
     sudo gem install bundler -v 1.17.3
     sudo bundler install --without production replica staging
-    sudo rbenv rehash
+    rbenv rehash
     source ~/.bashrc
     sudo bundle update rake
     sudo bundle install
@@ -248,7 +248,7 @@ install_dfire_dependencies () {
 install_dstil_overcommit () {
 
     sudo gem install overcommit -v 0.47.0
-    sudo rbenv rehash
+    rbenv rehash
     sudo overcommit --install
 
     verbose "Installed overcommit hooks."
