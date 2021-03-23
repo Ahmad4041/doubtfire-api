@@ -30,12 +30,12 @@ jobs:
       uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
       with:
         ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+        bundler-cache: false # runs 'bundle install' and caches installed gems automatically
 
 
     - name: Set up Enviroment
       run: | 
-            sh ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
+            sh ./githubworkflow.sh #updating permission git update-index --chmod=+x ./setup.sh
 
     - name: Run Project
       run: bundle exec rails s

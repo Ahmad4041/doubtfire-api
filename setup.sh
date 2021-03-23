@@ -291,7 +291,7 @@ if is_mac; then
 fi
 
 install_native_tools
-# install_rbenv
+install_rbenv
 # install_gem
 install_postgres
 install_dstil_overcommit
