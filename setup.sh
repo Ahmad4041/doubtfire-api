@@ -224,14 +224,14 @@ install_native_tools () {
 #
 install_dfire_dependencies () {
     msg "Installing Doubtfire dependencies..."
-    gem install bundler -v 1.17.3
-    bundler install --without production replica staging
+    sudo gem install bundler -v 1.17.3
+    sudo bundler install --without production replica staging
     rbenv rehash
     source ~/.bashrc
 
     msg "Populating database"
-    bundle exec rake db:create
-    bundle exec rake db:populate
+    sudo bundle exec rake db:create
+    sudo bundle exec rake db:populate
 
     if [ $? -ne 0 ]; then
         error "Could not populate database."
@@ -291,7 +291,7 @@ fi
 
 install_native_tools
 install_rbenv
-install_gem
+# install_gem
 install_postgres
 install_dstil_overcommit
 install_dfire_dependencies
