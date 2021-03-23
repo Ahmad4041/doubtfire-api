@@ -33,7 +33,6 @@ jobs:
 #         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Set up Enviroment
       run: | 
-            sh chmod +x ./setup.sh
             sh ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
 
     - name: Run Project

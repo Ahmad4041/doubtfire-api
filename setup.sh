@@ -226,9 +226,10 @@ install_dfire_dependencies () {
     msg "Installing Doubtfire dependencies..."
     sudo gem install bundler -v 1.17.3
     sudo bundler install --without production replica staging
-    rbenv rehash
+    sudo rbenv rehash
     source ~/.bashrc
-
+    sudo bundle update rake
+    sudo bundle install
     msg "Populating database"
     sudo bundle exec rake db:create
     sudo bundle exec rake db:populate
