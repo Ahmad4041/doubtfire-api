@@ -246,9 +246,9 @@ install_dfire_dependencies () {
 #
 install_dstil_overcommit () {
 
-    gem install overcommit -v 0.47.0
-    rbenv rehash
-    overcommit --install
+    sudo gem install overcommit -v 0.47.0
+    sudo rbenv rehash
+    sudo overcommit --install
 
     verbose "Installed overcommit hooks."
 }
