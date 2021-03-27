@@ -230,16 +230,16 @@ install_dfire_dependencies () {
     source ~/.bashrc
     sudo bundle update rake
     sudo bundle install
-    msg "Populating database"
-    sudo bundle exec rake db:create
-    sudo bundle exec rake db:populate
+    # msg "Populating database"
+    # sudo bundle exec rake db:create
+    # sudo bundle exec rake db:populate
 
-    if [ $? -ne 0 ]; then
-        error "Could not populate database."
-        exit 1
-    fi
+    # if [ $? -ne 0 ]; then
+    #     error "Could not populate database."
+    #     exit 1
+    # fi
 
-    verbose "populated database"
+    # verbose "populated database"
 }
 
 #
@@ -292,7 +292,6 @@ fi
 
 install_native_tools
 install_rbenv
-# install_gem
 install_postgres
 install_dstil_overcommit
 install_dfire_dependencies
