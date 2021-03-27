@@ -38,7 +38,12 @@ jobs:
             sh ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
 
     - name: Run Project
-      run: sudo bundle exec rails s
+      run: |
+      rm .bundle/config # remove a broken bundler configuration
+      gem update --system # might help if rubygems is outdated / broken
+      gem update bundler # might help if bundler is outdated / broken
+      bundle install
+      sudo bundle exec rails s
       
 # shell: chmod +x ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
 #       run: sh ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
