@@ -38,8 +38,7 @@ jobs:
             sh ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
 
     - name: Run Project
-      run: | 
-            sh sudo bundle exec rails s
+      run: sudo bundle exec rails s
       
 # shell: chmod +x ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
 #       run: sh ./setup.sh #updating permission git update-index --chmod=+x ./setup.sh
