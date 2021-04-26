@@ -230,6 +230,14 @@ install_dfire_dependencies () {
     source ~/.bashrc
     bundle update rake
     bundle install
+   
+}
+#
+# Installing Postgress and Popluate Database
+#
+popultate_database()
+{
+    install_postgres
     msg "Populating database"
     bundle exec rake db:create
     bundle exec rake db:populate
@@ -241,7 +249,6 @@ install_dfire_dependencies () {
 
     verbose "populated database"
 }
-
 #
 # Install Overcommit and DSTIL hooks.
 #
@@ -290,10 +297,10 @@ if is_mac; then
     install_homebrew
 fi
 
+install_dfire_dependencies
 install_native_tools
 install_rbenv
-install_postgres
-install_dfire_dependencies
+popultate_database
 install_dstil_overcommit
 install_latex
 
