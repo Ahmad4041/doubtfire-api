@@ -300,11 +300,14 @@ fi
 install_dfire_dependencies
 install_native_tools
 install_rbenv
-popultate_database
+install_postgres
 install_dstil_overcommit
 install_latex
 
-msg "You should now be able to launch the server with bundle exec rails s"
-verbose "Doubtfire should be successfuly Installed!"
-
-exec $SHELL
+# msg "You should now be able to launch the server with bundle exec rails s"
+# verbose "Doubtfire should be successfuly Installed!"
+# source ./database.sh
+# chmod +x database.sh
+# gnome-terminal -x ./database.sh
+gnome-terminal --tab --title="Populate Database" -e 'sh ./database.sh'
+# exec $SHELL
