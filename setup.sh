@@ -293,8 +293,8 @@ fi
 install_native_tools
 install_rbenv
 install_postgres
-install_dstil_overcommit
 install_dfire_dependencies
+install_dstil_overcommit
 install_latex
 
 msg "You should now be able to launch the server with bundle exec rails s"
